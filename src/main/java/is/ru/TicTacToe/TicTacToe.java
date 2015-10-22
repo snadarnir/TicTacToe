@@ -41,4 +41,12 @@ public class TicTacToe {
     public boolean IsBlank(int x, int y){
         return grid[y][x]  == STATE.BLANK;
     }
+
+    public void setWinner(STATE s){
+    	winner = s;
+    }
+
+    public boolean IsWinner(STATE s){
+    	return winner == s;
+    }
 }

@@ -50,4 +50,19 @@ public class TicTacToeTest {
     public void testIsBlank() {
         assertEquals(true , t.IsBlank(1,0));
     }
+
+    @Test
+    public void testIsWinner() {
+    	t.setWinner(TicTacToe.STATE.CIRCLE);
+
+        assertEquals(true , t.IsWinner(TicTacToe.STATE.CIRCLE));
+    }
+
+    @Test
+    public void testIsWinner2() {
+    	t.setWinner(TicTacToe.STATE.CROSS);
+    	
+        assertEquals(false , t.IsWinner(TicTacToe.STATE.CIRCLE));
+    }
+
 }

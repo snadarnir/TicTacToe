@@ -22,8 +22,23 @@ public class TicTacToe {
     	grid[y][x] = STATE.CIRCLE;
     }
 
+    public void setCross(int x, int y){
+    	grid[y][x] = STATE.CROSS;
+    }
+
+    public void setBlank(int x, int y){
+    	grid[y][x] = STATE.BLANK;
+    }
+
     public boolean IsCircle(int x, int y){
     	return grid[y][x]  == STATE.CIRCLE;
     }
 
+    public boolean IsCross(int x, int y){
+        return grid[y][x]  == STATE.CROSS;
+    }
+
+    public boolean IsBlank(int x, int y){
+        return grid[y][x]  == STATE.BLANK;
+    }
 }

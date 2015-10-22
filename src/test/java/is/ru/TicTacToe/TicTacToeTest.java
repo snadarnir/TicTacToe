@@ -28,4 +28,26 @@ public class TicTacToeTest {
 
 		assertEquals(true , t.IsCircle(1,1));
 	}
+
+	@Test
+    public void testIsCross() {
+    	t.setCross(0,0);
+
+        assertEquals(true , t.IsCross(0,0));
+    }
+
+    @Test
+	public void testIsCircle2() {
+		assertEquals(false , t.IsCircle(0,0));
+	}
+
+	@Test
+    public void testIsCross2() {
+        assertEquals(false , t.IsCross(1,1));
+    }
+
+    @Test
+    public void testIsBlank() {
+        assertEquals(true , t.IsBlank(1,0));
+    }
 }

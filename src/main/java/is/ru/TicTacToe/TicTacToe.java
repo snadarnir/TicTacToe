@@ -12,6 +12,8 @@ public class TicTacToe {
                 grid[y][x] = STATE.BLANK;
             }
         }
+
+        winner = STATE.BLANK;
     }
 
     public boolean isActive(){
@@ -30,15 +32,15 @@ public class TicTacToe {
     	grid[y][x] = STATE.BLANK;
     }
 
-    public boolean IsCircle(int x, int y){
+    public boolean isCircle(int x, int y){
     	return grid[y][x]  == STATE.CIRCLE;
     }
 
-    public boolean IsCross(int x, int y){
+    public boolean isCross(int x, int y){
         return grid[y][x]  == STATE.CROSS;
     }
 
-    public boolean IsBlank(int x, int y){
+    public boolean isBlank(int x, int y){
         return grid[y][x]  == STATE.BLANK;
     }
 
@@ -46,7 +48,32 @@ public class TicTacToe {
     	winner = s;
     }
 
-    public boolean IsWinner(STATE s){
+    public boolean isWinner(STATE s){
     	return winner == s;
     }
+
+    public void cleanGrid(){
+    	for (int y = 0; y < grid.length; y++) {
+            for (int x = 0; x < grid[y].length; x++) {
+                grid[y][x] = STATE.BLANK;
+            }
+        }
+
+        winner = STATE.BLANK;
+    }
+
+    public boolean isClean(){
+
+    	if(winner != STATE.BLANK) 
+    		return false;
+
+    	for (int y = 0; y < grid.length; y++) {
+            for (int x = 0; x < grid[y].length; x++) {
+                if(grid[y][x] != STATE.BLANK) 
+                	return false;
+            }
+        }
+        return true;
+    }
+
 }

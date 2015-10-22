@@ -26,43 +26,56 @@ public class TicTacToeTest {
 	public void testIsCircle() {
 		t.setCircle(1, 1);
 
-		assertEquals(true , t.IsCircle(1,1));
+		assertEquals(true , t.isCircle(1,1));
 	}
 
 	@Test
     public void testIsCross() {
     	t.setCross(0,0);
 
-        assertEquals(true , t.IsCross(0,0));
+        assertEquals(true , t.isCross(0,0));
     }
 
     @Test
 	public void testIsCircle2() {
-		assertEquals(false , t.IsCircle(0,0));
+		assertEquals(false , t.isCircle(0,0));
 	}
 
 	@Test
     public void testIsCross2() {
-        assertEquals(false , t.IsCross(1,1));
+        assertEquals(false , t.isCross(1,1));
     }
 
     @Test
     public void testIsBlank() {
-        assertEquals(true , t.IsBlank(1,0));
+        assertEquals(true , t.isBlank(1,0));
     }
 
     @Test
     public void testIsWinner() {
     	t.setWinner(TicTacToe.STATE.CIRCLE);
 
-        assertEquals(true , t.IsWinner(TicTacToe.STATE.CIRCLE));
+        assertEquals(true , t.isWinner(TicTacToe.STATE.CIRCLE));
     }
 
     @Test
     public void testIsWinner2() {
     	t.setWinner(TicTacToe.STATE.CROSS);
     	
-        assertEquals(false , t.IsWinner(TicTacToe.STATE.CIRCLE));
+        assertEquals(false , t.isWinner(TicTacToe.STATE.CIRCLE));
+    }
+
+    @Test
+    public void testIsClean() {
+    	t.setCross(0,0);	
+        assertEquals(false , t.isClean());
+    }
+
+    @Test
+    public void testIsClean2(){
+    	t.cleanGrid();
+    	
+        assertEquals(true , t.isClean());
     }
 
 }

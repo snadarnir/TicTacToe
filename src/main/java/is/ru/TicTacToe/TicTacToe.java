@@ -13,18 +13,4 @@ public class TicTacToe {
             }
         }
     }
-
-    public boolean isActive(){
-    	return grid != null;
-    }
-
-	public static int add(String text){
-		if(text.equals("")){
-			return 0;
-		}
-		else {
-			return 1;
-		}
-	}
-
 }

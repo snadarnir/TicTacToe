@@ -17,7 +17,6 @@ public class TicTacToeTest {
         t = new TicTacToe();
     }
 
-
 	@Test
 	public void testIsActive() {
 		assertEquals(true , t.isActive());

@@ -7,10 +7,23 @@ public class TicTacToe {
     private STATE winner;
 
     public TicTacToe() {
-        for (int x = 0; x < grid.length; x++) {
-            for (int y = 0; y < grid[x].length; y++) {
-                grid[x][y] = STATE.BLANK;
+        for (int y = 0; y < grid.length; y++) {
+            for (int x = 0; x < grid[y].length; x++) {
+                grid[y][x] = STATE.BLANK;
             }
         }
     }
+
+    public boolean isActive(){
+    	return grid != null;
+    }
+
+    public void setCircle(int x, int y){
+    	grid[y][x] = STATE.CIRCLE;
+    }
+
+    public boolean IsCircle(int x, int y){
+    	return grid[y][x]  == STATE.CIRCLE;
+    }
+
 }

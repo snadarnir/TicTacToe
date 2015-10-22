@@ -21,4 +21,11 @@ public class TicTacToeTest {
 	public void testIsActive() {
 		assertEquals(true , t.isActive());
 	}
+
+	@Test
+	public void testIsCircle() {
+		t.setCircle(1, 1);
+
+		assertEquals(true , t.IsCircle(1,1));
+	}
 }

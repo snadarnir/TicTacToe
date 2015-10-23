@@ -90,4 +90,30 @@ public class TicTacToeTest {
         t.setCircle(0,2);
 	assertEquals(true, t.isThreeInRow());
         }
+	
+	@Test
+        public void testAnyFreeSpotLeft(){
+        assertEquals(true, t.isAnyFreeSpotLeft());
+        }
+	
+	@Test
+        public void testAnyFreeSpotLeft2(){
+	t.setCircle(0,0);
+        t.setCircle(0,1);
+        t.setCircle(0,2);
+        t.setCircle(1,0);
+        t.setCircle(1,1);
+        t.setCircle(1,2);
+        t.setCircle(2,0);
+        t.setCircle(2,1);
+        t.setCircle(2,2);
+        assertEquals(false, t.isAnyFreeSpotLeft());
+        }
+	
+	@Test
+        public void testAnyFreeSpotLeft3(){
+	t.setCircle(0,0);
+        assertEquals(true, t.isAnyFreeSpotLeft());
+        }
+        
 }

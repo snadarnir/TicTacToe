@@ -105,6 +105,17 @@ public class TicTacToe {
 		return true;
 	}
 	return false;
+    }
+    
+    public boolean isAnyFreeSpotLeft(){
+	for(int x = 0; x < grid.length; x++){
+		for(int y = 0; y < grid.length; y++){
+			if(grid[y][x] == STATE.BLANK){
+				return true;
+			}
+		}
+	}
+	return false;
     }			
-}
+}			
 

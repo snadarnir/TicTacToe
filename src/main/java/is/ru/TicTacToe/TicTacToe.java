@@ -1,7 +1,7 @@
 package is.ru.TicTacToe;
 
 public class TicTacToe {
-	public enum STATE {BLANK, CROSS, CIRCLE}
+    public enum STATE {BLANK, CROSS, CIRCLE}
 
     private STATE[][] grid = new STATE[3][3];
     private STATE winner;
@@ -76,4 +76,35 @@ public class TicTacToe {
         return true;
     }
 
+    public boolean isThreeInRow(){
+	for(int x = 0; x < grid.length; x++){
+		STATE first = grid[0][x];
+		STATE second = grid[1][x];
+		STATE third = grid[2][x];
+		if(first == second && second == third && third != STATE.BLANK){
+                        return true;
+                }
+	}
+	for(int y = 0; y < grid.length; y++){
+		STATE first = grid[y][0];
+		STATE second = grid[y][1];
+		STATE third = grid[y][2];
+		if(first == second && second == third && third != STATE.BLANK){
+			return true;
+		}
+	}
+	STATE leftup = grid[2][0];
+	STATE leftdown = grid[0][0];
+	STATE mid = grid[1][1];
+	STATE rightup = grid[2][2];
+	STATE rightdown = grid[0][2];
+	if(leftup == mid && mid == rightdown && mid != STATE.BLANK){
+		return true;
+	}
+	if(rightup == mid && mid == leftdown && mid != STATE.BLANK){
+		return true;
+	}
+	return false;
+    }			
 }
+

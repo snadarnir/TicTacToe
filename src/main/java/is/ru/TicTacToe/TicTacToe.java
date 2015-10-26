@@ -173,7 +173,13 @@ public class TicTacToe {
                                 moveplayer("circle");
                                 isThreeInRow(STATE.CIRCLE);
                         }
+			else{
+				System.out.println("The player with the CROSS is the winner!");
+			}
                 }
+		if(isWinner(STATE.CIRCLE)){
+			System.out.println("The player with the CIRCLE is the winner!");
+		}
         }
    
     // Gets the x,y coordinates the player wants his mark on
@@ -188,14 +194,10 @@ public class TicTacToe {
 					System.out.println("This one is taken, please try again!");
 				}
 			}
-                        if(l == "cross"){
-				
+                        if(l == "cross"){	
                                 setCross(x,y);
-				
-				
                         }
-                        else{
-				
+                        else{				
                                 setCircle(x,y);
                         }
 

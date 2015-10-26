@@ -15,6 +15,8 @@ Discription:
 
 package is.ru.TicTacToe;
 
+import java.util.Scanner;
+
 public class TicTacToe {
     public enum STATE {BLANK, CROSS, CIRCLE}
 
@@ -156,6 +158,48 @@ public class TicTacToe {
 		}
 	}
 	return false;
-    }			
+    }
+
+    public static void main(String[] args){
+                TicTacToe game = new TicTacToe();
+    }
+
+    // Game is ran, goes a round as long as there is a free space and no winner yet. 
+    public void playGame(){
+                while(isAnyFreeSpotLeft() && !isWinner(STATE.CIRCLE) && !isWinner(STATE.CROSS)){
+                        moveplayer("cross");
+                        isThreeInRow(STATE.CROSS);
+                        if(!isWinner(STATE.CROSS)){
+                                moveplayer("circle");
+                                isThreeInRow(STATE.CIRCLE);
+                        }
+                }
+        }
+   
+    // Gets the x,y coordinates the player wants his mark on
+    private void moveplayer(String l){
+                Scanner in = new Scanner(System.in);
+			int x = -1;
+			int y = -1;
+			while(x < 0 || !isBlank(x,y)){
+                        	x = in.nextInt();
+                        	y = in.nextInt();
+				if(!isBlank(x,y)){
+					System.out.println("This one is taken, please try again!");
+				}
+			}
+                        if(l == "cross"){
+				
+                                setCross(x,y);
+				
+				
+                        }
+                        else{
+				
+                                setCircle(x,y);
+                        }
+
+        }
+			
 }			
 

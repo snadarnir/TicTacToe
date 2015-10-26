@@ -80,15 +80,23 @@ public class TicTacToeTest {
 
 	@Test
     public void testThreeInRow(){
-	   assertEquals(false, t.isThreeInRow());
-	}
+	assertEquals(false, t.isThreeInRow(TicTacToe.STATE.CIRCLE));
+    }
 
 	@Test
     public void testThreeInRow2(){
     	t.setCircle(0,0);
     	t.setCircle(0,1);
         t.setCircle(0,2);
-	   assertEquals(true, t.isThreeInRow());
+	assertEquals(true, t.isThreeInRow(TicTacToe.STATE.CIRCLE));
+    }
+
+        @Test
+    public void testThreeInRow3(){
+        t.setCircle(0,0);
+        t.setCircle(0,1);
+        t.setCircle(0,2);
+        assertEquals(false, t.isThreeInRow(TicTacToe.STATE.CROSS));
     }
 	
 	@Test
@@ -109,10 +117,10 @@ public class TicTacToeTest {
         t.setCircle(2,2);
         assertEquals(false, t.isAnyFreeSpotLeft());
     }
-	
-	@Test
+
+    @Test
     public void testAnyFreeSpotLeft3(){
-	    t.setCircle(0,0);
+	t.setCircle(0,0);
         assertEquals(true, t.isAnyFreeSpotLeft());
     }
 }

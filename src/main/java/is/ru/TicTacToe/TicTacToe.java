@@ -14,7 +14,7 @@ Discription:
 */
 
 package is.ru.TicTacToe;
-
+import is.ru.TicTacToe.TicTacToeMain;
 import java.util.Scanner;
 
 public class TicTacToe {
@@ -160,7 +160,8 @@ public class TicTacToe {
 	return false;
     }
 
-    public static void main(String[] args){
+
+/*    public static void main(String[] args){
                 TicTacToe game = new TicTacToe();
     }
 
@@ -202,6 +203,6 @@ public class TicTacToe {
                         }
 
         }
-			
+*/			
 }			
 

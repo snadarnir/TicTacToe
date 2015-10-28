@@ -2,7 +2,7 @@ package is.ru.TicTacToe;
 
 import java.util.Scanner;
 import is.ru.TicTacToe.TicTacToe;
-import is.ru.TicTacToe.TicTacToe.STATE
+import is.ru.TicTacToe.TicTacToe.STATE;
 
 
 public class TicTacToeMain {

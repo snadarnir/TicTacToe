@@ -12,10 +12,6 @@ public class TicTacToeTest {
 
     private TicTacToe t;
 
-@Test
-	public void testEmptyString() throws Exception{
-		assertEquals(0, Calculator.add(""));
-	}
     @Before
     public void setUp() {
         t = new TicTacToe();

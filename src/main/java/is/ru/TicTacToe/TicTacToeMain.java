@@ -6,21 +6,21 @@ import is.ru.TicTacToe.TicTacToe.STATE;
 
 
 public class TicTacToeMain {
-
 public static TicTacToe game;
 
- static void main(String[] args){
+  public  static void main(String[] args){
                 game = new TicTacToe();
-
+		playGame(game);
     }
 
     // Game is ran, goes a round as long as there is a free space and no winner yet. 
- public void playGame(){
+ public static void playGame(TicTacToe game){
                 while(game.isAnyFreeSpotLeft() && !game.isWinner(STATE.CIRCLE) && !game.isWinner(STATE.CROSS)){
-                        moveplayer("cross");
+                        System.out.println("hi");
+			moveplayer("cross", game);
                         game.isThreeInRow(STATE.CROSS);
                         if(!game.isWinner(STATE.CROSS)){
-                                moveplayer("circle");
+                                moveplayer("circle", game);
                                game.isThreeInRow(STATE.CIRCLE);
                         }
                         else{
@@ -31,7 +31,7 @@ public static TicTacToe game;
                         System.out.println("The player with the CIRCLE is the winner!");
                 }
         }
- private void moveplayer(String l){
+ private static void moveplayer(String l, TicTacToe game){
                 Scanner in = new Scanner(System.in);
                         int x = -1;
                         int y = -1;
@@ -48,8 +48,6 @@ public static TicTacToe game;
                         else{
                                 game.setCircle(x,y);
                         }
-
         }
-
 }
 

@@ -31,15 +31,26 @@ public static TicTacToe game;
                 if(game.isWinner(STATE.CIRCLE)){
                         System.out.println("The player with the CIRCLE is the winner!");
                 }
-        }
+ }
+
  private static void moveplayer(String l, TicTacToe game){
                 Scanner in = new Scanner(System.in);
                         int x = -1;
                         int y = -1;
-                        while(x < 0 || !game.isBlank(x,y)){
+			if(l == "cross"){
+				System.out.println("The player with the CROSS can make a move:");
+			}
+			else{
+				System.out.println("The player with the CIRCLE can make a move:");
+			}
+                        while(x < 0 || x > 2 || y < 0 || y > 2 || !game.isBlank(x,y)){
                                 x = in.nextInt();
                                 y = in.nextInt();
-                                if(!game.isBlank(x,y)){
+				if(x < 0 || x > 2 || y < 0 || y > 2){
+					System.out.println("You are off the board buddy, pick again!");
+				}
+				
+                                else if(!game.isBlank(x,y)){
                                         System.out.println("This one is taken, please try again!");
                                 }
                         }

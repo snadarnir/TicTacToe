@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="is.ru.TicTacToe.TicTacToeTest" tests="17" skipped="0" failures="0" errors="0" timestamp="2015-11-02T23:10:37" hostname="i-7f3b5dd9.csd07cloud.internal" time="0.014">
+  <properties/>
+  <testcase name="testThreeInRow" classname="is.ru.TicTacToe.TicTacToeTest" time="0.002"/>
+  <testcase name="testAnyFreeSpotLeft2" classname="is.ru.TicTacToe.TicTacToeTest" time="0.0"/>
+  <testcase name="testAnyFreeSpotLeft3" classname="is.ru.TicTacToe.TicTacToeTest" time="0.0"/>
+  <testcase name="testAnyFreeSpotLeft" classname="is.ru.TicTacToe.TicTacToeTest" time="0.0"/>
+  <testcase name="testThreeInRow2" classname="is.ru.TicTacToe.TicTacToeTest" time="0.0"/>
+  <testcase name="testThreeInRow3" classname="is.ru.TicTacToe.TicTacToeTest" time="0.001"/>
+  <testcase name="testIsActive" classname="is.ru.TicTacToe.TicTacToeTest" time="0.0"/>
+  <testcase name="testIsCircle" classname="is.ru.TicTacToe.TicTacToeTest" time="0.0"/>
+  <testcase name="testIsClean2" classname="is.ru.TicTacToe.TicTacToeTest" time="0.0"/>
+  <testcase name="testIsCross2" classname="is.ru.TicTacToe.TicTacToeTest" time="0.0"/>
+  <testcase name="testCheckXY" classname="is.ru.TicTacToe.TicTacToeTest" time="0.001"/>
+  <testcase name="testIsWinner" classname="is.ru.TicTacToe.TicTacToeTest" time="0.001"/>
+  <testcase name="testIsCircle2" classname="is.ru.TicTacToe.TicTacToeTest" time="0.0"/>
+  <testcase name="testIsWinner2" classname="is.ru.TicTacToe.TicTacToeTest" time="0.001"/>
+  <testcase name="testIsBlank" classname="is.ru.TicTacToe.TicTacToeTest" time="0.0"/>
+  <testcase name="testIsClean" classname="is.ru.TicTacToe.TicTacToeTest" time="0.001"/>
+  <testcase name="testIsCross" classname="is.ru.TicTacToe.TicTacToeTest" time="0.0"/>
+  <system-out><![CDATA[You are off the board buddy, pick again!
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

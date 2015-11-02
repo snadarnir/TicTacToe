@@ -37,8 +37,8 @@ public class TicTacToeMain {
  	//put the players check on it. 
  	private static void moveplayer(String l, TicTacToe game){
                 Scanner in = new Scanner(System.in);
-                        int x = -1;
-                        int y = -1;
+                        int x;
+                        int y;
 			int stat = -1;
 			if(l == "cross"){
 				System.out.println("The player with the CROSS can make a move:");

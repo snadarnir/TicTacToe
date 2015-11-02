@@ -124,6 +124,6 @@ public class TicTacToeTest {
 
         @Test
         public void testCheckXY(){
-                assertEquals(-1, m.checkXY(3,0));
+                assertEquals(-1, m.checkXY(6,0));
         }
 }

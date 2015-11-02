@@ -1,0 +1,2 @@
+#!/bin/bash
+jar -cvfm TicTacToe.jar ./bin/TicTacToe.mf -C classes is/ru/TicTacToe/TicTacToeMain.class -c classes is/ru/TicTacToe/TicTacToe.class

@@ -1,9 +1,10 @@
 #!/bin/bash
 
-for dir in `find ../doc -type d`
+for dir in `find ~/TicTacToe/doc -type d`
 do
-  if [ -e $dir/file.md ]; #test if dir contains file
-  then
-    markdown $dir/file.md > $dir/file.html
-  fi
+  
+   markdown $dir/Administration_Manual.md > $dir/Administration_Manual.html
+   markdown $dir/Design_Report.md > $dir/Design_Report.html
+   markdown $dir/Developer_Manual.md > $dir/Developer_Manual.html
+ 
 done

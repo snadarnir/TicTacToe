@@ -4,14 +4,24 @@ import java.util.Scanner;
 import is.ru.TicTacToe.TicTacToe;
 import is.ru.TicTacToe.TicTacToe.STATE;
 
-
 public class TicTacToeMain {
 	public static TicTacToe game;
+	public static Scanner in = new Scanner(System.in);  	
 
-  	public static void main(String[] args){
-                game = new TicTacToe();
-		playGame(game);
+	public static void main(String[] args){
+                start();
     	}
+
+	//start game an play while users press '1' at the end
+	public static void start(){
+		int play = 1;
+                while(play == 1){
+                        game = new TicTacToe();
+                        playGame(game);
+                        System.out.println("If you want to play again, press '1'. If you want to leave, please press any other digit");
+                        play = in.nextInt();
+                }
+	}
 
     	// Game is ran, goes a round as long as there is a free space and no winner yet. 
  	public static void playGame(TicTacToe game){ 
@@ -36,7 +46,6 @@ public class TicTacToeMain {
  	//Getting the coordinates from the player, checking if the coordinate is blank  and if so, 
  	//put the players check on it. 
  	private static void moveplayer(String l, TicTacToe game){
-                Scanner in = new Scanner(System.in);
                         int x = 0;
                         int y = 0;
 			int stat = -1;

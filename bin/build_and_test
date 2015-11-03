@@ -5,5 +5,6 @@
 ./bin/compile_tests
 ./bin/unit_test
 ./bin/make_jar
+#./bin/markdown_convert
 cowsay "Moooooo!"
 ponysay "Hallo Hannes, Skuli, Kalli og adrir kennarar, takk fyrir onnina og takk fyrir hjalpina!"

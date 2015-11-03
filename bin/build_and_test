@@ -5,5 +5,5 @@
 ./bin/compile_tests
 ./bin/unit_test
 ./bin/make_jar
-cowsay "yippeee!"
+cowsay "Moooooo!"
 ponysay "DONE"

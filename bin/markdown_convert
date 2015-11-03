@@ -1,5 +1,5 @@
 #!/bin/bash
-
+sudo apt-get install markdown
 for dir in `find ~/TicTacToe/doc -type d`
 do
   

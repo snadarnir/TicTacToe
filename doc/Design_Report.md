@@ -1,37 +1,3 @@
-Egill Anton
-
-
-Search Drive
-
-Drive
-.
-Folder Path
-My Drive
-HUG - Hugbúnaðarfræði 2015H
-NEW 
-Folders and views
-My Drive
-Shared with me
-Google Photos
-Recent
-Starred
-Trash
-3 GB of 15 GB used
-Upgrade storage
-.
-
-Text
-Administration Manual.md
-
-Text
-Design Report.md
-
-Text
-Development Manual.md
-Get Drive for PC
-All selections cleared 
-
-
 ## Tic-tac-toe Design Report
 ##### Version 1.0
 

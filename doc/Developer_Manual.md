@@ -1,36 +1,3 @@
-Egill Anton
-
-
-Search Drive
-
-Drive
-.
-Folder Path
-My Drive
-HUG - Hugbúnaðarfræði 2015H
-NEW 
-Folders and views
-My Drive
-Shared with me
-Google Photos
-Recent
-Starred
-Trash
-3 GB of 15 GB used
-Upgrade storage
-.
-
-Text
-Administration Manual.md
-
-Text
-Design Report.md
-
-Text
-Development Manual.md
-Get Drive for PC
-All selections cleared 
-
 # Tic-tac-toe development manual
 #### Version 1.0
 
@@ -142,6 +109,22 @@ $ $ gradle build
 
 Instead of needing to type every command we have created a Build script. All of our build scripts are stored in the bin folder in the root directory.
 ```sh
-$ cd bin/
+	$ cd bin/
 ```
 
+To build overall files, tests and to make a executable .jar file type:
+
+
+```sh
+	$ sh ./bin/build_and_test
+```
+
+After each run we want to convert our markdown to html, you can do it manually by typing: 
+```sh
+	$ sh ./bin/markdown_convert
+```
+But make sure you have markdown installed before:
+
+```sh
+	$ sudo apt-get install markdown
+```

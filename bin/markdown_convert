@@ -1,0 +1,9 @@
+#!/bin/bash
+
+for dir in `find ../doc -type d`
+do
+  if [ -e $dir/file.md ]; #test if dir contains file
+  then
+    markdown $dir/file.md > $dir/file.html
+  fi
+done
